@@ -41,6 +41,7 @@ public class Server {
                                 for (Integer ID :
                                         idList) {
                                     ids += ID;
+                                    ids += ",";
                                 }
                                 tellEveryone(0 + ",NEWGAME," + idList.size() + "," + ids);
                                 //listener for information from game to players
@@ -106,7 +107,7 @@ public class Server {
         }
 
         private void performMove(String ID) {
-            tellEveryone(0 + "," + "MOVE" + ID);
+            tellEveryone(0 + "," + "MOVE," + ID);
         }
 
     }
